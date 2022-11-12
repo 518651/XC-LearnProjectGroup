@@ -72,3 +72,11 @@ URL:https://github.com/88250/symphony
 
 URL:https://github.com/X1192176811/blog
 
+
+
+## 新加入同学配置开发环境:
+
+
+
+<a href="https://github.com/518651/XC-LearnProjectGroup/blob/main/front%20end/%E8%AE%A1%E7%A7%91%E5%B0%8F%E5%B1%8B-%E5%89%8D%E7%AB%AF-%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.md" target="_blank">前端配置开发环境</a>
+
