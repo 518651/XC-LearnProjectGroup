@@ -4,7 +4,7 @@
 
 QQ-Group:805427948
 
-![](https://github.com/518651/XC-LearnProjectGroup/tree/main/Prc/qrcode_1668246366062.jpg)
+![](https://github.com/518651/XC-LearnProjectGroup/blob/main/Prc/qrcode_1668246366062.jpg)
 
 ## 项目组说明：
 
