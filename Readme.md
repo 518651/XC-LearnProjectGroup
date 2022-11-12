@@ -1,6 +1,10 @@
 # 星辰-计科院小屋(暂定名称)
 
+
+
 QQ-Group:805427948
+
+![](https://github.com/518651/XC-LearnProjectGroup/tree/main/Prc/qrcode_1668246366062.jpg)
 
 ## 项目组说明：
 
