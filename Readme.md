@@ -44,3 +44,12 @@
 
 > 第五阶段：创建新项目，套用原项目开发思想、流程、方法、规范在不断验证中改进。
 
+
+
+- [ ] 一款用Java实现的现代社区（论坛/提问/BBS/社交网络/博客）系统平台。一个用Java实现的现代社区（论坛/问答/BBS/SNS/博客）系统平台。
+
+URL:https://github.com/88250/symphony
+
+- [ ] 基于SpringBoot + Vue 开发的前后端分离博客，采用SpringSecurity进行权限管理，ElasticSearch全文搜索，支持QQ、微博第三方登录、在线聊天、发布说说等功能。
+
+URL:https://github.com/X1192176811/blog
