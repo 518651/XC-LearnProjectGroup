@@ -46,6 +46,12 @@
 
 
 
+----
+
+### 阶段项目备选:
+
+> :warning:阶段项目尽量满足:项目所需要的技术栈为商讨一致决定学习目标,否则不纳入考虑范围  :warning:
+
 - [ ] 一款用Java实现的现代社区（论坛/提问/BBS/社交网络/博客）系统平台。一个用Java实现的现代社区（论坛/问答/BBS/SNS/博客）系统平台。
 
 URL:https://github.com/88250/symphony
@@ -53,3 +59,4 @@ URL:https://github.com/88250/symphony
 - [ ] 基于SpringBoot + Vue 开发的前后端分离博客，采用SpringSecurity进行权限管理，ElasticSearch全文搜索，支持QQ、微博第三方登录、在线聊天、发布说说等功能。
 
 URL:https://github.com/X1192176811/blog
+
