@@ -4,7 +4,7 @@
 
 QQ-Group:805427948
 
-![](https://github.com/518651/XC-LearnProjectGroup/blob/main/Prc/qrcode_1668246366062.jpg)
+![](https://github.com/518651/XC-LearnProjectGroup/tree/main/Prc/qrcode_1668246366062.jpg)
 
 ## 项目组说明：
 
@@ -51,6 +51,14 @@ QQ-Group:805427948
 
 
 ----
+
+### 阶段学习:
+
+前端:Vue，React等主流大厂使用的Javascript视图包
+
+后端:当前以JAVA为主,围绕必要的Web开发技能进行学习
+
+
 
 ### 阶段项目备选:
 
