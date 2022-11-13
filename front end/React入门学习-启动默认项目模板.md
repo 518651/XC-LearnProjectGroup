@@ -75,9 +75,9 @@ React 使创建交互式 UI 变得轻而易举。为你应用的每一个状态�
 
 打开CMD,输入以下配置
 
-- `npm install -g cnpm --registry=https://registry.npm.taobao.org`
+- `npm config set registry https://registry.npm.taobao.org`
 
-- 输入指令`cnpm -v`，能显示版本号，说明 cnpm 已经装好了
+- 输入指令`npm config get registry`，显包含registry.npm.taobao.org，说明npm配置淘宝镜像已经完成了
 
 
 
