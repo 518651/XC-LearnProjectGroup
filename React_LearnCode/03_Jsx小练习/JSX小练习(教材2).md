@@ -126,8 +126,6 @@
 
 1.分析实现目标的布局
 
-[]
-
 ![](https://github.com/518651/XC-LearnProjectGroup/blob/main/React_LearnCode/03_Jsx%E5%B0%8F%E7%BB%83%E4%B9%A0/prc/Target_div.png)
 
 观察得出,目标由1个H1标签+列表实现.又因为**React不允许有两个根节点**,顾在外侧套*上一层div*
