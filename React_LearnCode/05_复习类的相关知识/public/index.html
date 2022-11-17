@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script> -->
+    <title>05_复习类的基本知识</title>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script>
+        //创建一个Person的类
+        class Person{
+            //构造器方法
+            constructor(name,age){
+                //构造器中的this是谁? ---类的实例对象 
+                this.name = name
+                this.age = age
+            }
+            //一般方法
+            speak(){
+                //speak方法放在什么地方？---Person类的原型对象上
+                //speak的方法给谁用? ---供实例使用
+                //通过Person实例调用speak时,speak中的this就是person实例
+
+                console.log(`我叫 ${this.name} ,我年龄是 ${this.age}`)
+            }
+        }
+        //创建一个Student 类,继承Person类
+        //因为已经继承Person,也就继承了Person类中的构造器
+        //子类什么时候需要写构造器？ --- 
+
+        class Student extends Person{
+            constructor(name,age,grade){
+                super(name,age)//super必须放在之前,因为super是给父类传参数
+                this.grade = grade
+            }
+            speak(){
+                console.log(`我叫 ${this.name} ,我年龄是 ${this.age},我读的是${this.grade} `)//重写从父类继承的方法
+            }
+            study(){
+                console.log('我很努力的学习!')
+            }
+        }
+        const s1 = new Student('小张',15,'高一')
+        console.log(s1);
+        s1.speak() //s1 会寻找缔造者Student类,Student类原型对象里面没有speak,接着原型链找,最终在父类的原型对象找到speak
+        s1.study() 
+
+        /*
+            总结:
+            1.类中的构造器:不是必须写的.要对实例进行一些初始化的操作,如添加指定属性时才写
+            2.如果A类继承了B类,且A类写了构造器,那么A类构造器中的super是必须要调用的
+            3.类中所定义的方法,都是放在了类的原型对象上,供实例用
+
+        */
+    </script>
+
+</body>
+</html>
