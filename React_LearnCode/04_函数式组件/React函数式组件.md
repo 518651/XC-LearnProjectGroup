@@ -64,12 +64,20 @@ function Demo(){
 
 ```jsx
 //创建函数式组件
-function Demo(){
-    return <h2>我是用函数定义的组件(适用于[简单组件]的定义)</h2>
+function Demo(){// 这里函数名称必须大写
+    console.log(this) // 此处的this 是undefined ,因为babel编译后开启了严格模式
+    return <h2>我是用函数定义的组件(适用于[简单组件]的定义)</h2>//函数必须有返回值
 }
 
-ReactDOM.render(<Demo/>,document.getElementById('root'))
-// 请注意,要创建一个函数式组件时,定义的函数名称必须是大小,否则在后面渲染到节点时,受到JSX规则影响,渲染写的函数名称开头大写和定义的不一样会报错:'xxxx' is not defined
+// 渲染组件到页面
+ReactDOM.render(<Demo/>,document.getElementById('root'))//参数1的位置必须写组件标签,别直接写组件的名称
+/*
+    执行了ReactDom.render(<Demo/>....之后发生了什么?)
+    1.React解析组件标签,然后找到了Demo组件.如果找不到Demo组件就会报:'Demo' is not defined
+    2.发现组件是使用函数定义的,随后调用该函数,将返回的虚拟Dom转为真实Dom,然后呈现在页面中
+
+*/
+
 ```
 
 ![](https://github.com/518651/XC-LearnProjectGroup/tree/main/React_LearnCode/04_%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6/prctrue/code.png)
