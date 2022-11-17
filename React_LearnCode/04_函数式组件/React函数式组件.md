@@ -72,3 +72,4 @@ ReactDOM.render(<Demo/>,document.getElementById('root'))
 // 请注意,要创建一个函数式组件时,定义的函数名称必须是大小,否则在后面渲染到节点时,受到JSX规则影响,渲染写的函数名称开头大写和定义的不一样会报错:'xxxx' is not defined
 ```
 
+![](https://github.com/518651/XC-LearnProjectGroup/tree/main/React_LearnCode/04_%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BB%84%E4%BB%B6/prctrue/code.png)
