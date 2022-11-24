@@ -319,8 +319,112 @@ title.onclick()=>{
 class Weather extends React.Component(){
 	constructor(props){
 		super(props)
-		this.
+		this.state = {isHot:true}
 	}
+	render(){
+        console.log(this);
+		return <h1 onClick={()=>this.touchme()  }>今天天气很{this.state.isHot ? '炎热': '凉爽' }</h1>
+	}
+	touchme(){//点击回调函数
+        //console.log('标题被点击');
+        //由于torchme是作为onClick的回调,所以不是通过实例调用的,是直接调用
+        //类中的方法默认开启了局部的严格模式,所以torchme中的this为undefined
+        const {isHot} = this.state
+    }
 }
 ```
+
+> 定义好了回调函数,但是我们发现不是通过实例调用的,是直接调用,所以无法拿到this内容,也就无法修改state属性
+
+##  解决类中的this指向问题
+
+> 在构造器中加入一行修改this指向的代码
+
+```jsx
+this.torchme = this.torchme.bind(this)
+```
+
+**分析代码语句**
+
+`this.torchme.bind(this)`表达式中的this是什么? 
+
+A:组件的实例对象
+
+-----
+
+this中有没有torchme?
+
+A:有,纵使实例自身没有也会顺着原型找到原型上的torchme函数
+
+----
+
+`bind`函数是什么?
+
+`bind`函数能做两件事:1.生成一个新的函数 2.修改函数中的this(修改的this是谁?就是组件的实例对象)
+
+----
+
+`this.torchme.bind(this)`全段代码执行完后,就会拿到一个新函数,而且新函数中的this已经成功修改为类组件的实例对象
+
+之后的`this.torchme = this.torchme.bind(this)`便为定义实例自身上的方法接过this
+
+
+
+**最后简述下:**
+
+> 相当于是把原型上的方法，在new实例对象的时候，又生成了一个实例对象上的方法，并把原型上的方法更改了this 指向，并赋值给实例对象
+
+
+
+## setState的使用
+
+### 引入
+
+完成修改this指向问题后,接下来就应该是将State的值取反
+
+```jsx
+touchme(){
+        console.log(this);
+		//ishot取反
+		//获取原来ishot的值
+		const isHot = this.state.isHot
+		this.state.isHot = !isHot //将原来的值取反后重新赋值给this.state.isHot
+}
+```
+
+回到页面并点击标题,但未发现内容修改,顾打印下isHot的值
+
+```jsx
+console.log(this.state.isHot)
+```
+
+发现isHot值是取反了,但是标题就是没有修改成功.
+
+![](F:\Project\Javascript\UI\React_LearnCode\07_state\picture\whyvaluenotmodify.png)
+
+
+
+### 为什么没有修改成功?
+
+> 状态里面的数据不能直接修改
+
+以下代码就是为直接更改了状态里面的数据
+
+```jsx
+const isHot = this.state.isHot
+```
+
+**在React中,如果需要修改State的值,要用setState**
+
+
+
+## 怎么使用setState
+
+```jsx
+this.setState({isHot:!isHot}) // 简单的写法,传入一个对象。因为状态有多个数据,不给对象,React不知道需要修改谁
+```
+
+>  通过setState进行对原数据的一种合并,不是替换
+
+
 
