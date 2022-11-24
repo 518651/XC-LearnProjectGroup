@@ -32,7 +32,7 @@
 
 ## 实现效果
 
-![](F:\Project\Javascript\UI\React_LearnCode\07_state\picture\Statetaget.png)
+![](https://github.com/518651/XC-LearnProjectGroup/blob/main/React_LearnCode/07_state/picture/Statetaget.png)
 
 ## 说明:
 
@@ -172,11 +172,11 @@ ReactDOM.render(<Weather/>,document.getElementById('root'))
 
 实现效果截图:
 
-![]()
+![](https://github.com/518651/XC-LearnProjectGroup/blob/main/React_LearnCode/07_state/picture/Statetaget.png)
 
 代码截图:
 
-![]()
+![](https://github.com/518651/XC-LearnProjectGroup/blob/main/React_LearnCode/07_state/picture/StateInitSuccess.png)
 
 
 
@@ -400,7 +400,7 @@ console.log(this.state.isHot)
 
 发现isHot值是取反了,但是标题就是没有修改成功.
 
-![](F:\Project\Javascript\UI\React_LearnCode\07_state\picture\whyvaluenotmodify.png)
+![](https://github.com/518651/XC-LearnProjectGroup/blob/main/React_LearnCode/07_state/picture/whyvaluenotmodify.png)
 
 
 
@@ -427,4 +427,7 @@ this.setState({isHot:!isHot}) // 简单的写法,传入一个对象。因为状�
 >  通过setState进行对原数据的一种合并,不是替换
 
 
+## CODE
+> React代码截图
+![](https://github.com/518651/XC-LearnProjectGroup/blob/main/React_LearnCode/07_state/picture/code_3.png)
 
