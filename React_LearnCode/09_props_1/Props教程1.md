@@ -8,7 +8,7 @@
 
 ## 目标效果:
 
-![](F:\Project\Javascript\UI\React_LearnCode\09_props_1\Pictrue\target.png)
+![](https://github.com/518651/XC-LearnProjectGroup/blob/main/React_LearnCode/09_props_1/Pictrue/target.png)
 
 
 
