@@ -26,3 +26,8 @@ this.state = {ishot:true}
 
 ## 注意点:
 
+1.组件中rende方法中的this为组件实例对象
+
+2.组件自定义的方法中的this为undefined,需要强行绑定this(通过函数对象的`bind()函数`实现 或者 `箭头函数`)
+
+3.状态数据,不能直接修改或更新
