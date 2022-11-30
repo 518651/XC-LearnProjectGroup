@@ -8,7 +8,7 @@
 
 ## 目标效果:
 
-![](https://github.com/518651/XC-LearnProjectGroup/blob/main/React_LearnCode/09_props_1/Pictrue/target.png)
+![](F:\Project\Javascript\UI\React_LearnCode\09_props_1\Pictrue\target.png)
 
 
 
@@ -126,4 +126,88 @@ class Proson extends React.Component{
 ReactDOM.render(<Proson name="jerry" age="18" sex="男"/>,document.getElementById('root'))
 
 ```
+
+
+
+# 批量传递props
+
+## 参数多怎么传递
+
+上诉Example中每一个只有三个信息,也不会显的很长，但是如果有12个信息呢?
+
+
+
+```jsx
+const p = {name='老刘',age=18,sex='女'}
+ReactDOM.render(<Person name={p.name} age={p.age} sex={p.sex}>)
+```
+
+### **React中批量传递props方法(展开运算符)**:
+
+```jsx
+const p = {name='老刘',age=18,sex='女'}
+ReactDOM.render(<Person {..p}>)
+```
+
+> 请注意:要使用展开运算符必须满足每组数据传入标签是和构造器中定义的标签是一致的.否则数据会接不上
+
+#### 展开运算符对数组操作:
+
+```jsx
+ler arr1=[1,3,5,7,9]
+ler arr2=[2,4,6,8,10]
+```
+
+
+
+> 展开一个数组
+
+```jsx
+console.log(...arr1);展开一个数组
+```
+
+
+
+> 拼接数组
+
+```jsx
+ler arr3 = [...arr1,...arr2]//拼接两个数组
+console.log(...arr3)
+```
+
+
+
+#### 展开运算符对函数操作
+
+
+
+```jsx
+//函数传参
+funtion sum(...number){
+	console.log('@',number);
+	//如果需要计算求和使用
+	return number.reduce((preValue,currenValue)=>{
+		return preValue+currenValue
+	})
+}
+console.log(sum(1,2,3,4))
+```
+
+
+
+#### 注意点:
+
+##### 展开运算符不能展开对象
+
+```
+let person={name:'tom',age:18}
+let person2 = person
+console.log(...person); 报错
+```
+
+
+
+
+
+
 
